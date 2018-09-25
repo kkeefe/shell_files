@@ -1,0 +1,26 @@
+Commands Used:
+
+cd - change directory
+
+cd -; returns to your original directory..
+
+ls - list command
+can pass additional directories to ls to list at one time:
+ie.
+	ls ~/ /usr/ ~/Desktop
+this will list all of the items in those directories.. 
+
+most useful options:
+
+-a --lists all of the files including hidden ones..
+-t --sort by time
+-h --make human readable..
+-l --long format to show edit time, and file size
+
+file - used to determine a file's type..
+
+less - optional text viewer compared to nano or more..
+
+ProTips from chapter:
+
+List of all Linux directories placed on pages 19-21

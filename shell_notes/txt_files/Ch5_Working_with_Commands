@@ -1,0 +1,60 @@
+Commands used:
+
+type    - indicate how a command name is interpreted
+which   - display which executable program will be executed
+man     - display a command's manual page
+apropos - display a list of appropriate commands
+info    - display a command's info entry
+whatis  - display a very brief description of a command
+alias   - create an alias for a command
+
+most useful options:
+
+
+type:
+
+	--no options..
+
+which:
+
+	--no options..
+
+man:
+
+	man -k --performs the same options as apropos
+
+apropos:
+
+	nothing useful --see man..
+
+info:
+
+	alternative information page to man..
+	--no options..
+
+whatis:
+
+	--no options..
+
+alias:
+
+	structure of command:
+	alias name='string_of_commands'
+	ie:
+	alias foo = 'cd /usr; ls; cd-' --command goes to /usr, lists it, and returns to original directory
+
+	--protip: alias run in the command line is not permanent and will not last after closing the existing shell..
+	--to make changes lasting go and edit .zshrc file at ~/.zshrc
+		
+
+
+
+ProTips from chapter:
+
+	/usr/bin --stores all of the information for executable binaries including the sources for terminal commands..
+
+	 There are additional man pages. PAge 43 lists the different man sections..
+
+reading the help page:
+
+	[-L | -P] --indicates that the options L and P are exclusive..
