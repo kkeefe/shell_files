@@ -1,0 +1,68 @@
+Commands used:
+
+cat	 - concatenate files
+sort	 - sort lines of text
+uniq	 - report or omit repeated lines
+wc	 - print newline, word, and byte counts for each file
+grep	 - print lines matching a pattern
+head	 - output the first part of a file
+tail	 - output the last part of a file
+tee	 - read from the standard input and write to standard output and files
+
+>	 - redirect standard output..
+| 	 - pipelines..
+
+most useful options:
+
+1) the ">" operator
+
+>    - use to move output to the other destination..
+ie: ls -l > output.txt will place the ls of that directory into the output.txt file..
+
+protip: using > on a file without a precommand:
+ie: > output.txt --this will truncate the file completely..
+    >> use this to append to existing files..
+
+REDIRECT STANDARD ERROR: 2>,
+&> - redirects both standard error and standard output..
+protip -> send things to /dev/null/ to 'kill' the redirect..
+
+2) cat - concatenate
+
+cat (no args) will copy whatever you input on the standard input..
+cat source.txt -- prints the source.txt file to standard output
+cat < source.txt --same as above..
+
+3) |  - pipelines..
+
+command 1 | command 2
+
+command 2 is run on the standard output text of the result from command 1..
+protip -> very useful with filters like sort and uniq..
+
+ie: ls /bin/ /bin/usr/ | sort | uniq | less --this will present all of uniq files in both dirs, in a sorted fasion..
+
+4) uniq - omit repeated words or lines..
+
+portip -> often used with sort as a filter..
+
+most useful options:
+-c --print the number of times they occured..
+-d --print the items that were duplicated..
+-u --print the items that were NOT duplicated..
+
+4) wc - print line, word, and byte counts
+
+most useful options..
+-c --prints # of bytes used..
+-w --prints number of words used..
+-l --prints number of lines used..
+
+5) Head / Tail.. --print the beginning of the last part of a file..
+
+defaults to the first or last 10 lines of a file..
+
+6) Tee - offers a redirect to two different locations..
+
+protip -> must be accompanied with a pipe..
+
