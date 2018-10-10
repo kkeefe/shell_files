@@ -1,0 +1,48 @@
+Commands used:
+
+echo -- display a line of text..
+
+EXPANSIONS
+
+1) Pathname expansion: * --this is the method by which wildcards work..
+
+    ie: ls D* -everything starting with a capitol D is listed..
+        ls *D -everything ENDING with a capitol D is listed.. etc..
+
+    ie: echo ~/*/ will list all directories after ~/..
+
+2) Tidle Expansion: ~ (short for /Users/kevinkeefe/
+
+3) Arithmetic Expansion: echo $((2+2))
+
+   / integer result division
+   ** exponenation,
+   % remainer, others are obvious..
+
+4) Brace Expansion: echo Front-{A,B,C}-Back
+
+   repeats the echo operation for each item in the bracket..
+   bracket uses:
+	{1,2,3} -list..
+	{1..10}	-continuum..
+	{a..z} 	-also alphabetical..
+
+protip:  --bracket expansion can be nested..
+
+5) parameter expansion: echo $USER
+
+   --more useful in shell scripting..
+
+6) Command Substituition.. echo $(ls) --print everything on standard output that ls returns..
+
+   back-ticks are a good alternative to that $() notation..
+
+
+Quotes
+
+1) Double Quotes: all special expressions are treated as strings except for $, \, `
+2) Single Quotes: ALL special characters are treated as string..
+3) Escaping Characters: use backslash to quote only the following character..
+
+ie: echo "`ls`" --still lists the files
+    echo '`ls'` --will print only ls..
